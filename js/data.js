@@ -45,6 +45,30 @@ const PRODUTOS_INICIAIS = [
         badge: 'Mais Vendido',
         plataforma: 'amazon',
         linkAfiliado: 'https://amzn.to/4um6rQk'
+    },
+    {
+        id: 19,
+        nome: 'Kit Banheiro Completo Acessórios De Bambu Moderno Lixeira Com Tampa Escova Saboneteira Cor Preto Irsina',
+        categoria: 'banheiro',
+        preco: 78.99,
+        descricao: 'Feito de bambu e plástico. Design elegante e contemporâneo que combina detalhes em bambu. Conjunto completo com 6 peças essenciais para o banheiro. Escova sanitária com cabo em aço inox que não enferruja. Saboneteira líquida com pump de inox para dosagem precisa. Lixeira com tampa giratória.',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_759793-MLA106843198044_022026-F.webp',
+        destaque: true,
+        badge: 'Novo',
+        plataforma: 'mercadolivre',
+        linkAfiliado: 'https://meli.la/2HfS6VA'
+    },
+    {
+        id: 20,
+        nome: 'Coberdrom Casal Queen Size Sherpa Cobertor Edredom Inverno Pele Lã Carneiro Super Macio',
+        categoria: 'textil',
+        preco: 114.98,
+        descricao: 'Tamanho Queen 2.4x2.2m. Desenho liso, 100% poliéster. Tecido externo de 200 fios com enchimento acolchoado. Dupla face, hipoalergênico. Apto para máquinas de lavar. Maior conforto durante as suas horas de descanso.',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_811551-MLA99938959445_112025-F.webp',
+        destaque: true,
+        badge: 'Mais Vendido',
+        plataforma: 'mercadolivre',
+        linkAfiliado: 'https://meli.la/2YzaK1K'
     }
 ];
 
