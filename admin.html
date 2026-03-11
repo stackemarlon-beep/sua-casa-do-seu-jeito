@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin | Sua Casa do Seu Jeito</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-home"></i>
+                <span>Sua Casa <strong>do Seu Jeito</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Loja</a>
+                <a href="admin.html" class="nav-link active">Admin</a>
+            </nav>
+            <div class="header-actions">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Loja</a>
+            <a href="admin.html" class="nav-link active">Admin</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-cog"></i> Painel Administrativo</h1>
+            <p>Gerencie seus produtos e links de afiliado</p>
+        </div>
+    </div>
+
+    <div class="container admin-container">
+        <!-- Login Admin -->
+        <div id="adminLogin" class="admin-form" style="max-width: 400px; margin: 60px auto;">
+            <h3><i class="fas fa-lock"></i> Acesso Administrativo</h3>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" id="adminPassword" placeholder="Digite a senha">
+            </div>
+            <p id="loginError" style="color: var(--accent); display: none; margin-top: 10px; font-size: 0.9rem;">Senha incorreta</p>
+            <div class="form-actions">
+                <button class="btn btn-primary" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                </button>
+            </div>
+        </div>
+
+        <!-- Conteúdo Admin -->
+        <div id="adminContent" style="display: none;">
+            <!-- Stats -->
+            <div class="admin-stats" id="adminStats"></div>
+
+            <!-- Info Afiliados -->
+            <div class="markup-section" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+                <h3 style="margin: 0;"><i class="fas fa-link" style="color: var(--primary);"></i> Como funciona</h3>
+                <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">
+                    1. Cadastre-se nos programas de afiliados (Shopee, Amazon, Magalu, etc.)<br>
+                    2. Copie o link de afiliado do produto que deseja divulgar<br>
+                    3. Cadastre o produto aqui com o link de afiliado<br>
+                    4. Quando alguém comprar pelo seu link, você ganha a comissão!
+                </p>
+            </div>
+
+            <!-- Formulário Produto -->
+            <div class="admin-form" id="productForm">
+                <h3 id="formTitle"><i class="fas fa-plus-circle"></i> Adicionar Produto</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Nome do Produto *</label>
+                        <input type="text" id="prodNome" placeholder="Ex: Vaso Decorativo Cerâmica" maxlength="200">
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria *</label>
+                        <select id="prodCategoria">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preço (R$) *</label>
+                        <input type="number" id="prodPreco" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Plataforma *</label>
+                        <select id="prodPlataforma">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Link de Afiliado *</label>
+                        <input type="url" id="prodLink" placeholder="https://s.shopee.com.br/xxx ou https://amzn.to/xxx">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Descrição</label>
+                        <textarea id="prodDescricao" placeholder="Descreva o produto..." maxlength="1000"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>URL da Imagem</label>
+                        <input type="url" id="prodImagem" placeholder="https://exemplo.com/imagem.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label>Badge (etiqueta)</label>
+                        <select id="prodBadge">
+                            <option value="">Nenhum</option>
+                            <option value="Novo">Novo</option>
+                            <option value="Popular">Popular</option>
+                            <option value="Oferta">Oferta</option>
+                            <option value="Mais Vendido">Mais Vendido</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Destaque?</label>
+                        <select id="prodDestaque">
+                            <option value="true">Sim</option>
+                            <option value="false">Não</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" id="saveProductBtn">
+                        <i class="fas fa-save"></i> Salvar Produto
+                    </button>
+                    <button class="btn btn-outline" id="cancelEditBtn" style="display: none;">
+                        <i class="fas fa-times"></i> Cancelar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lista de Produtos -->
+            <div class="admin-products">
+                <h3><i class="fas fa-boxes"></i> Produtos Cadastrados (<span id="totalProdutos">0</span>)</h3>
+                <div style="overflow-x: auto;">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Img</th>
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Plataforma</th>
+                                <th>Link</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Salvo!</span>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

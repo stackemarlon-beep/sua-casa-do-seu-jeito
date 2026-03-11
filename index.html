@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Casa do Seu Jeito | Decorações e Utensílios para Casa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-home"></i>
+                <span>Sua Casa <strong>do Seu Jeito</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="#categorias" class="nav-link">Categorias</a>
+                <a href="#produtos" class="nav-link">Produtos</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar produtos...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="admin.html" class="admin-link" title="Painel Admin">
+                    <i class="fas fa-cog"></i>
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link active">Início</a>
+            <a href="#categorias" class="nav-link">Categorias</a>
+            <a href="#produtos" class="nav-link">Produtos</a>
+            <a href="#sobre" class="nav-link">Sobre</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Transforme sua casa <br>do <span class="highlight">seu jeito</span></h1>
+            <p>Encontramos as melhores ofertas de decoração e utensílios para casa nas maiores lojas do Brasil. Clique e compre direto com os melhores preços!</p>
+            <a href="#produtos" class="btn btn-primary btn-lg">Ver Ofertas</a>
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="section" id="categorias">
+        <div class="container">
+            <h2 class="section-title">Categorias</h2>
+            <p class="section-subtitle">Encontre o que você precisa</p>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Renderizado via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section class="section section-alt" id="produtos">
+        <div class="container">
+            <h2 class="section-title">Melhores Ofertas</h2>
+            <p class="section-subtitle">Selecionadas especialmente para você</p>
+            
+            <!-- Filtros -->
+            <div class="filters">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <div id="filterButtons">
+                    <!-- Renderizado via JS -->
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Renderizado via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="section" id="beneficios">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-tag"></i>
+                    <h3>Melhores Preços</h3>
+                    <p>Garimpamos as melhores ofertas nas maiores lojas</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Lojas Confiáveis</h3>
+                    <p>Shopee, Amazon, Magalu, Mercado Livre e mais</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Compra Segura</h3>
+                    <p>Você compra direto na loja oficial com toda garantia</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Atualizado</h3>
+                    <p>Ofertas sempre atualizadas com os melhores preços</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section section-alt" id="sobre">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2 class="section-title text-left">Sobre Nós</h2>
+                <p>Na <strong>Sua Casa do Seu Jeito</strong>, buscamos diariamente as melhores ofertas de decoração e utensílios para casa nas maiores lojas do Brasil.</p>
+                <p>Nosso trabalho é encontrar os melhores preços para você transformar sua casa gastando menos. Cada produto é selecionado e verificado antes de ser indicado.</p>
+                <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Fale Conosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-home"></i> Sua Casa do Seu Jeito</h3>
+                    <p>As melhores ofertas de decoração e utensílios para casa.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <a href="index.html">Início</a>
+                    <a href="#categorias">Categorias</a>
+                    <a href="#produtos">Ofertas</a>
+                    <a href="#sobre">Sobre</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="mailto:contato@suacasadoseujeito.com"><i class="fas fa-envelope"></i> E-mail</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sua Casa do Seu Jeito. Todos os direitos reservados.</p>
+                <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 5px;">Este site contém links de afiliados. Ao comprar através dos nossos links, podemos receber uma comissão sem custo adicional para você.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Produto -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalName"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-price">
+                        <span class="price" id="modalPrice"></span>
+                    </div>
+                    <div class="modal-platform" id="modalPlatform"></div>
+                    <a href="#" class="btn btn-primary btn-block btn-lg" id="modalBuyBtn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> Comprar Agora
+                    </a>
+                    <p class="modal-disclaimer">Você será redirecionado para a loja oficial</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Link copiado!</span>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
